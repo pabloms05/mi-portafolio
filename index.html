@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="/mi-portafolio/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Botón Hamburguesa -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Fondo oscuro del menú -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Overlay lateral pantalla completa -->
+  <div class="full-menu" id="fullMenu">
+    <div class="menu-left">
+      <nav>
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#education">Formación y Certificados</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="menu-right">
+      <div class="about-me">
+        <h2>Sobre mí</h2>
+        <p><strong>Nombre:</strong> Pablo Martínez</p>
+        <p><strong>Profesión:</strong> Desarrollador Web</p>
+        <p><strong>Ciudad:</strong> Reus, Tarragona</p>
+        <p><strong>Email:</strong> pablomasa05@gmail.com</p>
+        <p><strong>Teléfono:</strong> 658 86 46 01</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Hero / Presentación inicial -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <img src="images/imagen_2025-09-26_153502146-removebg-preview.png" alt="Pablo Martínez" class="hero-avatar">
+      <h1>Pablo Martínez</h1>
+      <p class="hero-subtitle">Desarrollador de Aplicaciones Web</p>
+      <p class="hero-desc">Creo aplicaciones web visuales y eficientes</p>
+      <div class="hero-actions">
+        <a href="#contact" class="hero-btn">Contáctame</a>
+        <a href="pdf/CV Pablo Martínez Sánchez.pdf" class="hero-btn hero-btn-outline" target="_blank">Descargar CV</a>
+      </div>
+      <div class="hero-social">
+        <a href="https://github.com/pabloms05" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/pablo-martinez-sanchez-099243266" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!--Formación y Certificados-->
+  <section id="education" class="fade-section">
+    <h2>Formación y Certificados</h2>
+    <div class="education-grid">
+      <div class="education-card">
+        <h3>Grado Medio en Sistemas Microinformáticos y Redes</h3>
+        <p>Institut Baix Camp</p>
+        <span class="date">2021 - 2023</span>
+      </div>
+      <div class="education-card">
+        <h3>Grado Superior en Desarrollo de Aplicaciones Web</h3>
+        <p>Institut Baix Camp</p>
+        <span class="date">2024 - Actualidad</span>
+      </div>
+      <div class="education-card">
+        <h3>Grado Superior Online en Desarrollo de Aplicaciones Multiplataforma</h3>
+        <p>Formación Universitaria</p>
+        <span class="date">2023-2024</span>
+      </div>
+      <!-- Añadir más tarjetas según necesites -->
+    </div>
+  </section>
+
+
+  <!-- Habilidades -->
+  <section id="skills" class="fade-section">
+    <h2>Habilidades</h2>
+    <div class="skills-grid">
+      <div class="skill">
+        <div class="skill-header">
+          <i class="fab fa-html5 skill-icon" style="color:#e34c26"></i>
+          <h3>HTML</h3>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="90%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <i class="fab fa-css3-alt skill-icon" style="color:#1572B6"></i>
+          <h3>CSS</h3>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="85%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <i class="fab fa-js-square skill-icon" style="color:#F7DF1E"></i>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="40%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="projects" class="fade-section">
+    <h2>Proyectos</h2>
+
+    <!-- Botones de filtro -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="app">Apps</button>
+      <button class="filter-btn" data-filter="design">Diseño</button>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card" data-category="web">
+        <img src="https://enricmas.cat/assets/img/works/helenajornet/01.jpg" alt="Proyecto 1">
+        <div class="project-info">
+          <h3>Proyecto Web 1</h3>
+          <p>Descripción breve.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="app">
+        <img src="https://enricmas.cat/assets/img/works/naturaki/01.jpg" alt="Proyecto 2">
+        <div class="project-info">
+          <h3>Proyecto App</h3>
+          <p>Descripción breve.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="design">
+        <img src="https://picsum.photos/600/400" alt="Proyecto 3">
+        <div class="project-info">
+          <h3>Proyecto Diseño</h3>
+          <p>Descripción breve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contacto -->
+  <section id="contact" class="contact-section fade-section">
+    <h2>Contacto</h2>
+    <div class="contact-card">
+      <form id="contact-form">
+        <div class="input-group">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Nombre" required>
+        </div>
+        <div class="input-group">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fa fa-comment"></i>
+          <textarea placeholder="Mensaje" required></textarea>
+        </div>
+        <button type="submit"><i class="fa fa-paper-plane"></i> Enviar</button>
+      </form>
+    </div>
+  </section>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
