@@ -512,17 +512,22 @@ section h2 {
 .full-menu.closing .menu-right { transform: translateX(100%); }
 .menu-left nav ul { list-style: none; }
 .menu-left nav ul li { margin: 20px 0; }
+/* Hover sobre cada li del menú izquierdo */
 .menu-left nav ul li a {
+  display: inline-block;  /* <- esto hace que transform funcione */
   text-decoration: none;
   color: #fff;
   font-size: 2rem;
   font-weight: 600;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .menu-left nav ul li a:hover {
   transform: scale(1.1);
   color: #00bfff;
 }
+
+
 .menu-right .about-me {
   max-width: 320px;
   text-align: left;
