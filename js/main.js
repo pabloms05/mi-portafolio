@@ -91,11 +91,24 @@ filterBtns.forEach(btn => {
     filterBtns.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
-    const filter = btn.getAttribute("data-filter");
+    const filterCategory = btn.getAttribute("data-filter");
+    const filterLanguage = btn.getAttribute("data-language");
 
     projectCards.forEach(card => {
       const category = card.getAttribute("data-category");
-      if (filter === "all" || category === filter) {
+      const languages = card.getAttribute("data-language")?.split(",") || [];
+
+      let show = true;
+
+      if (filterCategory && filterCategory !== "all") {
+        show = category === filterCategory;
+      }
+
+      if (filterLanguage) {
+        show = show && languages.includes(filterLanguage);
+      }
+
+      if (show) {
         card.classList.remove("hide");
       } else {
         card.classList.add("hide");
@@ -149,3 +162,4 @@ menuOverlay.addEventListener("click", closeMenu);
 menuLinks.forEach(link => {
   link.addEventListener("click", closeMenu);
 });
+

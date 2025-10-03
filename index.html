@@ -53,7 +53,6 @@
   <!-- Hero / Presentación inicial -->
   <section id="hero" class="hero-section">
     <div class="hero-content">
-      <img src="images/imagen_2025-09-26_153502146-removebg-preview.png" alt="Pablo Martínez" class="hero-avatar">
       <h1>Pablo Martínez</h1>
       <p class="hero-subtitle">Desarrollador de Aplicaciones Web</p>
       <p class="hero-desc">Creo aplicaciones web visuales y eficientes</p>
@@ -63,7 +62,8 @@
       </div>
       <div class="hero-social">
         <a href="https://github.com/pabloms05" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/pablo-martinez-sanchez-099243266" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/pablo-martinez-sanchez-099243266" target="_blank"><i
+            class="fab fa-linkedin"></i></a>
       </div>
     </div>
   </section>
@@ -95,33 +95,27 @@
   <!-- Habilidades -->
   <section id="skills" class="fade-section">
     <h2>Habilidades</h2>
-    <div class="skills-grid">
-      <div class="skill">
-        <div class="skill-header">
-          <i class="fab fa-html5 skill-icon" style="color:#e34c26"></i>
-          <h3>HTML</h3>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="90%"></div>
-        </div>
+    <!-- Bloques de categorías de habilidades -->
+    <div class="skills-categories">
+      <div class="skill-category">
+        <h3><i class="fa-solid fa-code"></i> Desarrollo Web</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>PHP y Laravel</li>
+          <li>SQL y MySQL</li>
+          <li>Git y GitHub</li>
+          <li>Diseño Responsive</li>
+        </ul>
       </div>
-      <div class="skill">
-        <div class="skill-header">
-          <i class="fab fa-css3-alt skill-icon" style="color:#1572B6"></i>
-          <h3>CSS</h3>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="85%"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <div class="skill-header">
-          <i class="fab fa-js-square skill-icon" style="color:#F7DF1E"></i>
-          <h3>JavaScript</h3>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="40%"></div>
-        </div>
+      <div class="skill-category">
+        <h3><i class="fa-solid fa-network-wired"></i> Sistemas y Redes</h3>
+        <ul>
+          <li>Linux y Windows Server</li>
+          <li>Administración de redes (LAN/WLAN)</li>
+          <li>Virtualización (VMware / VirtualBox)</li>
+          <li>Soporte técnico</li>
+          <li>Gestión de usuarios y seguridad</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -136,24 +130,30 @@
       <button class="filter-btn" data-filter="web">Web</button>
       <button class="filter-btn" data-filter="app">Apps</button>
       <button class="filter-btn" data-filter="design">Diseño</button>
+
+      <button class="filter-btn" data-language="html">HTML</button>
+      <button class="filter-btn" data-language="css">CSS</button>
+      <button class="filter-btn" data-language="js">JavaScript</button>
+      <button class="filter-btn" data-language="react">React</button>
+      <button class="filter-btn" data-language="laravel">Laravel</button>
     </div>
 
     <div class="projects-grid">
-      <div class="project-card" data-category="web">
+      <div class="project-card" data-category="web" data-language="html,css,js">
         <img src="https://enricmas.cat/assets/img/works/helenajornet/01.jpg" alt="Proyecto 1">
         <div class="project-info">
           <h3>Proyecto Web 1</h3>
           <p>Descripción breve.</p>
         </div>
       </div>
-      <div class="project-card" data-category="app">
+      <div class="project-card" data-category="app" data-language="js,react">
         <img src="https://enricmas.cat/assets/img/works/naturaki/01.jpg" alt="Proyecto 2">
         <div class="project-info">
           <h3>Proyecto App</h3>
           <p>Descripción breve.</p>
         </div>
       </div>
-      <div class="project-card" data-category="design">
+      <div class="project-card" data-category="design" data-language="html, css, laravel">
         <img src="https://picsum.photos/600/400" alt="Proyecto 3">
         <div class="project-info">
           <h3>Proyecto Diseño</h3>
