@@ -77,12 +77,12 @@ html {
 }
 .hero-btn:hover { background: #00bfff; }
 .hero-btn-outline {
-  background: transparent;
-  border: 2px solid #2563eb;
-  color: #2563eb;
+  background: #2563eb;
+  border: none;
+  color: #fff;
 }
 .hero-btn-outline:hover {
-  background: #2563eb;
+  background: #00bfff;
   color: #fff;
 }
 .hero-btn::before {
