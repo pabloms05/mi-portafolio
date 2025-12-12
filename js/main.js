@@ -163,3 +163,47 @@ menuLinks.forEach(link => {
   link.addEventListener("click", closeMenu);
 });
 
+// Envío de formulario: abrir cliente de correo (mailto)
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const status = document.getElementById("contact-status");
+    if (status) status.textContent = "Enviando…";
+
+    const action = contactForm.getAttribute("action");
+    const formData = new FormData(contactForm);
+
+    try {
+      if (action && action.includes("formspree.io")) {
+        const res = await fetch(action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: formData,
+        });
+        if (res.ok) {
+          if (status) status.textContent = "¡Mensaje enviado! Te responderé pronto.";
+          contactForm.reset();
+        } else {
+          const data = await res.json().catch(() => ({}));
+          const msg = data?.errors?.[0]?.message || "No se pudo enviar. Inténtalo más tarde.";
+          if (status) status.textContent = msg;
+        }
+        return;
+      }
+
+      // Fallback: mailto si no hay backend configurado
+      const name = document.getElementById("contact-name")?.value?.trim() || "";
+      const email = document.getElementById("contact-email")?.value?.trim() || "";
+      const message = document.getElementById("contact-message")?.value?.trim() || "";
+      const to = "pablomasa05@gmail.com";
+      const subject = encodeURIComponent(`Contacto desde portafolio - ${name}`);
+      const body = encodeURIComponent([`Nombre: ${name}`, `Email: ${email}`, "", "Mensaje:", message].join("\n"));
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      if (status) status.textContent = "Abriendo tu cliente de correo…";
+    } catch (err) {
+      if (status) status.textContent = "Error al enviar. Revisa tu conexión e inténtalo de nuevo.";
+    }
+  });
+}
+

@@ -168,20 +168,22 @@
   <section id="contact" class="contact-section fade-section">
     <h2>Contacto</h2>
     <div class="contact-card">
-      <form id="contact-form">
+      <form id="contact-form" action="https://formspree.io/f/xldqannk" method="POST">
         <div class="input-group">
           <i class="fa fa-user"></i>
-          <input type="text" placeholder="Nombre" required>
+          <input id="contact-name" name="name" type="text" placeholder="Nombre" required>
         </div>
         <div class="input-group">
           <i class="fa fa-envelope"></i>
-          <input type="email" placeholder="Email" required>
+          <input id="contact-email" name="email" type="email" placeholder="Email" required>
         </div>
         <div class="input-group">
           <i class="fa fa-comment"></i>
-          <textarea placeholder="Mensaje" required></textarea>
+          <textarea id="contact-message" name="message" placeholder="Mensaje" required></textarea>
         </div>
+        <input type="hidden" name="_subject" value="Contacto desde portafolio">
         <button type="submit"><i class="fa fa-paper-plane"></i> Enviar</button>
+        <p id="contact-status" style="margin-top:12px; font-size:0.95rem; color:#2563eb;"></p>
       </form>
     </div>
   </section>
