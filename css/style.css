@@ -116,7 +116,7 @@ html {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
-  padding: 100px 20px;
+  padding: 100px 20px 100px 80px; /* espacio extra a la izquierda para títulos verticales */
   position: relative;
 }
 .fade-section.visible {
@@ -384,8 +384,13 @@ section h2 {
   
   /* Títulos verticales más pequeños */
   section h2 {
-    font-size: 1.5rem;
-    left: 10px;
+    position: static;
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin: 0 0 18px 0;
+    text-align: left;
   }
   
   /* Formación responsive */
@@ -435,7 +440,7 @@ section h2 {
   
   /* Secciones con más padding */
   .fade-section {
-    padding: 60px 15px;
+    padding: 60px 16px 60px 16px;
   }
 }
 
