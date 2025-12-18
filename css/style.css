@@ -365,6 +365,78 @@ section h2 {
     align-items: center;
   }
   .project-card { max-width: 90%; }
+  
+  /* Hero responsive */
+  .hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  .hero-subtitle { font-size: 1.2rem; }
+  .hero-desc { font-size: 1rem; }
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Títulos verticales más pequeños */
+  section h2 {
+    font-size: 1.5rem;
+    left: 10px;
+  }
+  
+  /* Formación responsive */
+  .education-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  
+  /* Habilidades responsive */
+  .skills-categories {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+  
+  /* Filtros responsive */
+  .filter-buttons {
+    gap: 8px;
+    margin: 15px 10px 30px;
+  }
+  .filter-btn {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+  
+  /* Contacto responsive */
+  .contact-card {
+    padding: 25px 20px;
+  }
+  .contact-section button {
+    justify-content: center;
+  }
+  
+  /* Menú responsive */
+  .full-menu {
+    flex-direction: column;
+  }
+  .menu-left, .menu-right {
+    padding: 20px;
+  }
+  .menu-left nav ul li a {
+    font-size: 1.5rem;
+  }
+  .menu-right {
+    display: none; /* Ocultar info en móvil para ahorrar espacio */
+  }
+  
+  /* Secciones con más padding */
+  .fade-section {
+    padding: 60px 15px;
+  }
 }
 
 /* Contacto */
